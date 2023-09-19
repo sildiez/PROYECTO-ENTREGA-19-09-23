@@ -1,0 +1,21 @@
+{% extends 'App/index.html' %}
+
+{% load static %}
+
+{% block title %}
+    Crear Formulario Videos
+{% endblock title %}
+
+{% block codigoDinamico %}
+
+<form action="" method="POST"> {% csrf_token %}
+        
+    <h3>Ingresar un Video</h3>
+    <table>
+        {{miformulario.as_table}}  
+    </table>   
+
+    <button type="submit" value="Enviar">Enviar</button>
+        
+</form>
+{% endblock %}

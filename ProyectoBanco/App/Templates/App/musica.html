@@ -1,0 +1,13 @@
+{% extends 'App/index.html' %}
+
+{% load static %}
+{% block title %}
+    Musica
+{% endblock title %}
+{% block codigoDinamico %}
+    <h1>La musica disponible es:</h1>
+    {% for musica in musica %}
+        <p>Articulo: {{musica.numero}}, Duracion: {{musica.duracion}} minutos, en: {{musica.calidad}}, Categoria: {{musica.categoria}} </p>
+    {% endfor %}    
+
+    {% endblock %}

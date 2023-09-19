@@ -1,0 +1,13 @@
+{% extends 'App/index.html' %}
+
+{% load static %}
+{% block title %}
+    Vectores
+{% endblock title %}
+{% block codigoDinamico %}
+    <h1>Los vectores disponibles son:</h1>
+    {% for vectores in vectores %}
+        <p>Articulo: {{vectores.numero}}, Categoria: {{vectores.categoria}}, Disposicion: {{vectores.orientacion}}, en modo: {{vectores.tipo}} </p>
+    {% endfor %}    
+
+    {% endblock %}

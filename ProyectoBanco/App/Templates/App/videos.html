@@ -1,0 +1,14 @@
+{% extends 'App/index.html' %}
+
+{% load static %}
+{% block title %}
+    Videos
+{% endblock title %}
+{% block codigoDinamico %}
+    <h1>Los videos disponibles son:</h1>
+    {% for videos in videos %}
+        <p>Articulo: {{videos.numero}}, Dimensiones: {{videos.tamaño}} pixeles, en: {{videos.resolucion}}, Categoria: {{videos.categoria}}, Disposicion: {{videos.orientacion}} </p>
+    {% endfor %}    
+
+    {% endblock %}
+    

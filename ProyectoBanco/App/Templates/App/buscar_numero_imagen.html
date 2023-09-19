@@ -1,0 +1,30 @@
+{% extends 'App/index.html' %}
+
+{% load static %}
+
+{% block title %}
+    Buscar Imagen
+{% endblock title %}
+
+{% block codigoDinamico %}
+<form action="" method="get">
+
+    <input type="text" name="numero" id="numero" placeholder="buscar imagen">
+
+    <input type="submit" value="Buscar">
+
+</form>
+
+{% if imagen %}
+
+    <ul>
+    {% for imagen in imagen %}
+            <li>La Imagen del articulo: {{imagen.numero}}, con dimensiones: {{imagen.tamaño}} pixeles, en: {{imagen.resolucion}} DPI, de la categoria: {{imagen.categoria}}, disposicion: {{imagen.orientacion}}, en modo: {{imagen.tipo}}</li>
+    {% endfor %}
+    </ul>
+
+{% else %}
+        <p>No hay imagen para mostrar</p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'App/index.html' %}
+
+{% load static %}
+
+{% block title %}
+    Buscar Vector
+{% endblock title %}
+
+{% block codigoDinamico %}
+<form action="" method="get">
+
+    <input type="text" name="numero" id="numero" placeholder="buscar vector">
+
+    <input type="submit" value="Buscar">
+
+</form>
+
+{% if vector %}
+
+    <ul>
+    {% for vector in vector %}
+            <li>El vector con el articulo: {{vector.numero}}, de la categoria: {{vector.categoria}}, en disposicion: {{vector.orientacion}}, en modo: {{vector.tipo}}</li>
+    {% endfor %}
+    </ul>
+
+{% else %}
+        <p>No hay vector para mostrar</p>
+{% endif %}
+
+{% endblock %}

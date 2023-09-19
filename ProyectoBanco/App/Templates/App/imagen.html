@@ -1,0 +1,14 @@
+{% extends 'App/index.html' %}
+
+{% load static %}
+{% block title %}
+    Fotos
+{% endblock title %}
+{% block codigoDinamico %}
+    <h1>Las imagenes disponibles son:</h1>
+    {% for imagenes in imagenes %}
+        <p>Articulo: {{imagenes.numero}}, Dimensiones: {{imagenes.tamaño}} pixeles, en: {{imagenes.resolucion}} DPI, Categoria: {{imagenes.categoria}}, Disposicion: {{imagenes.orientacion}}, en modo: {{imagenes.tipo}} </p>
+    {% endfor %}    
+
+    {% endblock %}
+    
