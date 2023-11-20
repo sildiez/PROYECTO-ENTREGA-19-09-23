@@ -1,7 +1,7 @@
 # DIEZ SILVANA GABRIELA -FINAL-PYTHON
 # ProyectoFinalSilvanaGabrielaDiezPython
-Proyecto Final Silvana Gabriela Diez curso Python en Centro de Formacion 406
-se desarrrollo un microservicios con una aplicación web estilo banco de imágenes y recursos audiovisuales para profesionales y el blog correspondiente a la misma, programada en Python en Django. Esta web tendrá admin, perfiles, registro de usuarios, páginas y formularios.
+Proyecto Final Silvana Gabriela Diez curso Python en Centro de Formacion 406 Pedro Callegari de Morón
+se desarrrollo un microservicio compuesto por una aplicación web estilo banco de imágenes y recursos audiovisuales para profesionales dedicados a ese área y el blog correspondiente a la misma, programada en Python en Django. Esta web tendrá admin, perfiles, registro de usuarios, páginas y formularios.
 
 Este proyecto no utiliza Python puro sino Python con Django para desarrollo web. Y la magia de HTML5 Y CSS3 combinado de las plantillas de Bootstrap nos facilitan
 el diseño FrontEnd de este proyecto.
@@ -79,7 +79,7 @@ Listo!
 ## Créditos
 Gracias a todos los que apoyaron la iniciativa del proyecto y a los que brindaron información y ayuda en los momentos de complicaciones y contratiempos. 
 Mi agradecimiento al Centro de formación 406 de Morón, por la posibilidad de incorporar nuevos conocimientos y por los momentos compartidos, al [Profesor] Ignacio Giordano, y a los compañeros que siempre estuvieron ahí y me dieron el aliento para no decaer cuando era necesario, además a los amigos que incitaron para continuar en el camino de la programación con python/django. 
-Por ultimo y casi diría lo importante a mí, por este grandisimo esfuerzo, en este año tan difícil que me ha tocado superar, y a mi Familia que me acompañó en este transcurso, mil gracias.
+Por último y casi diría lo más importante, a mí, por este grandísimo esfuerzo, en este año tan difícil que me ha tocado superar, y a mi Familia que me acompañó en este transcurso, mil gracias.
 
 # Autor✒️
 SILVANA GABRIELA DIEZ
