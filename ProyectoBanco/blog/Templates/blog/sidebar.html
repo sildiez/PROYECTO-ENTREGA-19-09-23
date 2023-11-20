@@ -1,0 +1,22 @@
+{% block sidebar %}
+
+<style>
+        .card{
+            box-shadow: 0 16px 48px #E3E7EB;
+        }
+
+</style>
+
+<!-- Sidebar Widgets Column -->
+<div class="col-md-4 float-right ">
+<div class="card my-4">
+        <h5 class="card-header">Acerca Nuestro</h5>
+    <div class="card-body">
+        <p class="card-text"> Este increíble blog esta creado para que usted pueda dejar sus comentarios, consultas y dudas acerca de los recursos que brindamos y pueda interactuar con nosotros y nuestros usuarios. Solicitamos respeto y lenguaje acorde..!</p>
+        <a href="{% url 'Inicio' %}"
+            class="btn btn-danger">GRACIAS!!!</a>
+    </div>
+</div>
+</div>
+
+{% endblock sidebar %}

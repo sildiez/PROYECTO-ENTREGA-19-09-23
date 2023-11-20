@@ -1,0 +1,44 @@
+{% extends 'App/index.html' %}
+
+{% load static %}
+
+{% block title %}
+    Mostrar Vectores
+{% endblock title %}
+
+{% block codigoDinamico %}
+<h1>Los vectores disponibles son:</h1>
+{% for vector in vectores %}
+    <p>
+        id: {{vector.id}}
+        Articulo: {{vector.numero}}, 
+        Categoria: {{vector.categoria}}, 
+        Disposicion: {{vector.orientacion}}, 
+        Modo: {{vector.tipo}} 
+    </p>
+    <button>
+            <a href="{% url 'eliminar_vector' vector_id=vector.id %}">Eliminar</a>
+    </button>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <button>
+        <a href="{% url 'actualizar_vector' vector_id=vector.id %}">Actualizar</a>
+    </button>
+    {% endfor %}        
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <br>
+        <button>
+            <a href="{% url 'VectoresFormulario' %}">Agregar un nuevo vector</a>
+        </button>
+    
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <br>
+        <button>
+            <a href="{% url 'buscar_numero_vector' %}">Buscar un vector</a>
+        </button>
+
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'App/index.html' %}
+
+{% load static %}
+
+{% block title %}
+    Listado de Musica
+{% endblock title %}
+
+{% block codigoDinamico %}
+{% for musica in object_list %}
+
+<ul>
+    <li>
+        <h2>{{musica}} </h2>
+        <br>
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        <button>
+            <a href="{% url 'detail' musica.id %}">Detalles</a>
+        </button>
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        <button>
+            <a href="{% url 'Delete' musica.id %}">Eliminar</a>
+        </button>
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        <button>
+            <a href="{% url 'Update' musica.id %}">Actualizar</a>
+        </button>
+
+    </li>
+</ul>
+
+{% endfor %}
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <br>
+<button>
+    <a href="{% url 'Create' %}">Crear nueva Musica</a>
+</button>
+
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <br>
+<button>
+    <a href="{% url 'buscar_numero_musica' %}">Buscar Musica</a>
+</button>
+
+{% endblock %}
+

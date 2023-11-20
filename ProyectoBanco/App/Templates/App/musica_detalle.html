@@ -1,0 +1,24 @@
+{% extends 'App/index.html' %}
+
+{% load static %}
+
+{% block title %}
+    Detalle de la Musica
+{% endblock title %}
+
+{% block codigoDinamico %}
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<h2>{{musica.numero}}</h2>
+
+<h2>{{musica.duracion}}</h2>
+
+<h2>{{musica.calidad}}</h2>
+
+<h2>{{musica.categoria}}</h2>
+
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<button>
+    <a href="{% url 'list' %}">Regresar</a>
+</button>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'App/index.html' %}
+{% load static %}
+
+{% block codigoDinamico %}
+
+<form method="post"> {% csrf_token %}
+    Estas seguro que deseas eliminar la musica {{object}}?
+    <input type="submit" value="Eliminar">
+</form>
+{% endblock %}

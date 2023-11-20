@@ -1,0 +1,21 @@
+{% extends 'App/index.html' %}
+
+{% load static %}
+
+{% block title %}
+    Registro
+{% endblock title %}
+
+{% block codigoDinamico %}
+<form action="" method="post">{% csrf_token %}
+    <h3>Registro necesario para continuar</h3>
+    <br>
+    <table>
+        {{form.as_p}}
+    </table>
+    <button type="submit">Registro</button>
+
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'App/index.html' %}
+
+{% load static %}
+
+{% block title %}
+    Detalle del Video
+{% endblock title %}
+
+{% block codigoDinamico %}
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<h2>{{video.numero}}</h2>
+
+<h2>{{video.tamaño}}</h2>
+
+<h2>{{video.resolucion}}</h2>
+
+<h2>{{video.categoria}}</h2>
+
+<h2>{{video.orientacion}}</h2>
+
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<button>
+    <a href="{% url 'list_v' %}">Regresar</a>
+</button>
+
+{% endblock %}

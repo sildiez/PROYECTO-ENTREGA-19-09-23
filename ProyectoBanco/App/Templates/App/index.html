@@ -24,7 +24,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">B</a>
+                <a class="navbar-brand" href="#page-top">BIENVENIDOS AL BANCO</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -35,15 +35,20 @@
                         <li class="nav-item"><a class="nav-link" href="{% url 'Imagenes' %}">Imagenes</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'Vectores' %}">Vectores</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'Videos' %}">Videos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'Musica' %}">Musica</a></li> 
-                        <li class="nav-item"><a class="nav-link" href="{% url 'ImagenesFormulario' %}">Imagenes_Ing</a></li> 
-                        <li class="nav-item"><a class="nav-link" href="{% url 'VideosFormulario' %}">Videos_Ing</a></li> 
-                        <li class="nav-item"><a class="nav-link" href="{% url 'VectoresFormulario' %}">Vectores_Ing</a></li> 
-                        <li class="nav-item"><a class="nav-link" href="{% url 'MusicaFormulario' %}">Musica_Ing</a></li> 
-                        <li class="nav-item"><a class="nav-link" href="{% url 'buscar_numero_imagen' %}">B_Imagen</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'buscar_numero_video' %}">B_Video</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'buscar_numero_vector' %}">B_Vector</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'buscar_numero_musica' %}">B_Musica</a></li> 
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Musica' %}">Musica</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Contacto' %}">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Sign Up' %}">Registrarse</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'bloghome' %}">Blog</a></li>
+                        {% if request.user.is_authenticated %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Logout' %}">Logout</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'mostrarimagen' %}">M_Imagen</a></li> 
+                        <li class="nav-item"><a class="nav-link" href="{% url 'mostrarvector' %}">M_Vector</a></li> 
+                        <li class="nav-item"><a class="nav-link" href="{% url 'list_v' %}">Listar Video</a></li> 
+                        <li class="nav-item"><a class="nav-link" href="{% url 'list' %}">Listar Musica</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Pedido' %}">Pedido</a></li>
+                        {% else %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Login' %}">Login</a></li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
@@ -54,8 +59,14 @@
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">sgdiez</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Proyecto de entrega para curso de programación en Python.</h2>
-                        <a class="btn btn-primary" href="#about">Año 2023</a>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Proyecto de programación backend en Python.</h2>
+                        <a class="btn btn-primary" href="{% url 'Acerca' %}">About</a>
+                        {% if request.user.is_authenticated %}
+                            <h1 class="mb-5">Hola {{user.username}}</h1>
+                            <img src="{{Avatar}}" />
+                        {% else %}
+                            <h1 class="mb-5">Hola Mundo</h1>
+                        {% endif %}
                     </div>
                 </div>
             </div>

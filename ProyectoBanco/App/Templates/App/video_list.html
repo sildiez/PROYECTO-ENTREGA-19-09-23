@@ -1,0 +1,49 @@
+{% extends 'App/index.html' %}
+
+{% load static %}
+
+{% block title %}
+    Listado de Videos
+{% endblock title %}
+
+{% block codigoDinamico %}
+{% for video in object_list %}
+
+<ul>
+    <li>
+        <h2>{{video}} </h2>
+        <br>
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        <button>
+            <a href="{% url 'detail_v' video.id %}">Detalles</a>
+        </button>
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        <button>
+            <a href="{% url 'Delete_V' video.id %}">Eliminar</a>
+        </button>
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        <button>
+            <a href="{% url 'Update_V' video.id %}">Actualizar</a>
+        </button>
+
+    </li>
+</ul>
+
+{% endfor %}
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <br>
+<button>
+    <a href="{% url 'Create_V' %}">Crear nuevo Video</a>
+</button>
+
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <br>
+<button>
+    <a href="{% url 'buscar_numero_video' %}">Buscar Video</a>
+</button>
+
+{% endblock %}

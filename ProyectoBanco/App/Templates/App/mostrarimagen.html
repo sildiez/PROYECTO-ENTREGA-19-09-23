@@ -1,0 +1,46 @@
+{% extends 'App/index.html' %}
+
+{% load static %}
+
+{% block title %}
+    Mostrar Imagenes
+{% endblock title %}
+
+{% block codigoDinamico %}
+<h1>Las imagenes disponibles son:</h1>
+{% for imagen in imagenes %}
+    <p>
+        id: {{imagen.id}}
+        Articulo: {{imagen.numero}}, 
+        Dimensiones: {{imagen.tamaño}} pixeles, 
+        Resolucion: {{imagen.resolucion}} DPI, 
+        Categoria: {{imagen.categoria}}, 
+        Disposicion: {{imagen.orientacion}}, 
+        Modo: {{imagen.tipo}} 
+    </p>
+    <button>
+            <a href="{% url 'eliminar_imagen' imagen_id=imagen.id %}">Eliminar</a>
+    </button>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <button>
+        <a href="{% url 'actualizar_imagen' imagen_id=imagen.id %}">Actualizar</a>
+    </button>
+    {% endfor %}        
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <br>
+        <button>
+            <a href="{% url 'ImagenesFormulario' %}">Agregar una nueva imagen</a>
+        </button>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <br>
+        <button>
+            <a href="{% url 'buscar_numero_imagen' %}">Buscar una imagen</a>
+        </button>
+    
+
+
+{% endblock %}
