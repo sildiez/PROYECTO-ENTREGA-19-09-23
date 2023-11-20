@@ -10,7 +10,7 @@ el diseño FrontEnd de este proyecto.
 # Comenzando🚀
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu local para propósitos de desarrollo y pruebas.
 
-git clone https://github.com/sildiez/PROYECTO-ENTREGA-19-09-23.git
+git clone https://github.com/sildiez/ProyectoBancoEntregaFinal2023.git
 
 # Descarga de instalación ZIP
 Ir a “code” > download ZIP
